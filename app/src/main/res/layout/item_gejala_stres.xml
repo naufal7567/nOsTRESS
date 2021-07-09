@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_gejala_stres"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle_gejala_stres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Title Text"
+        android:fontFamily="@font/poppins"
+        android:textColor="#000000"
+        android:textSize="32dp"/>
+
+    <TextView
+        android:id="@+id/tvDesc_gejala_stres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tvTitle_gejala_stres"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="center"
+        android:text="Desc Text"
+        android:fontFamily="@font/poppins"
+        android:textColor="#000000"
+        android:textSize="14sp"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/iv_info_gejala_stres"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/fisik_stres"
+        app:civ_border_color="@android:color/holo_orange_light"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#0099FF"
+        android:focusable="true"
+        android:layout_above="@+id/tvTitle_gejala_stres"
+        />
+
+</RelativeLayout>
