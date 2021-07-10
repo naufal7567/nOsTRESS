@@ -1,7 +1,12 @@
 package org.nostress.behappy
 
-data class UserStress (
-    val username_edittext_register : String?,
-    val email_edittext_register : String,
-    val password_edittext_register : String
-)
+import com.google.firebase.database.Exclude
+
+data class UserStress(
+        val uid: String,
+        val username: String,
+        val email: String,
+        val password: String
+) {
+
+}

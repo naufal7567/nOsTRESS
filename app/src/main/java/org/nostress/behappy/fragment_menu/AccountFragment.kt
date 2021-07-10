@@ -1,14 +1,12 @@
 package org.nostress.behappy.fragment_menu
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_account.*
@@ -44,8 +42,8 @@ class AccountFragment : Fragment() {
 // (REFERENSI Lukman)
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         // Inflate the layout for this fragment
@@ -61,10 +59,24 @@ class AccountFragment : Fragment() {
 //
 //        loadProfil()
 //
+        val myRef: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                val value = dataSnapshot.getValue(UserStress::class.java)
+                Log.d("Success", "Value is: $value")
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w("Gagal", "Failed to read value.", error.toException())
+            }
+        })
         btn_logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             activity?.let{
-                val intent = Intent (it, LoginActivity::class.java)
+                val intent = Intent(it, LoginActivity::class.java)
                 it.startActivity(intent)
             }
         }

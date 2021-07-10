@@ -12,6 +12,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register.*
+import org.nostress.behappy.Utils.isValidEmail
+import org.nostress.behappy.Utils.isValidPassword
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
@@ -37,6 +39,7 @@ class RegisterActivity : AppCompatActivity() {
         username_edittext_register = findViewById(R.id.username_edittext_register)
         email_edittext_register = findViewById(R.id.email_edittext_register)
         password_edittext_register = findViewById(R.id.password_edittext_register)
+        register_button_register = findViewById(R.id.register_button_register)
 
 //        database = FirebaseDatabase.getInstance()
 //        dataReference = datafinbase?.getReference("profil")
@@ -61,40 +64,40 @@ class RegisterActivity : AppCompatActivity() {
             return
         }
 
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener {
-                if (!it.isSuccessful) return@addOnCompleteListener
-
-//                val currentUser = auth.currentUser
-//                val currentUserDb = dataReference?.child((currentUser?.uid!!))
-//                currentUserDb?.child("username")?.setValue(username_edittext_register.text.toString())
-//                currentUserDb?.child("email")?.setValue(email_edittext_register.text.toString())
-//                currentUserDb?.child("password")?.setValue(password_edittext_register.text.toString())
-
-                Log.d("Registerakun", "Successfully create user with uid : ${it.result?.user?.uid}")
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            }
-            .addOnFailureListener {
-                Log.d("Registerakun", "Failed to create user : ${it.message}")
-                if (it.message.equals("The email address is badly formatted.")) {
-                    Toast.makeText(this, "Format email salah", Toast.LENGTH_SHORT).show()
-                } else if (it.message.equals("The given password is invalid. [ Password should be at least 6 characters ]")) {
-                    Toast.makeText(this, "Password minimal 6 karakter", Toast.LENGTH_SHORT).show()
-                } else if (it.message.equals("The email address is already in use by another account.")) {
-                    Toast.makeText(this, "Email sudah pernah digunakan", Toast.LENGTH_SHORT).show()
-                }
-            }
-        //val ref: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
-
-        val UserStressId = ref.push().key
-
-        val UserStress = UserStress(UserStressId, username, email)
-
-        if (UserStressId != null) {
-            ref.child(UserStressId).setValue(UserStress).addOnCanceledListener {
-                Toast.makeText(applicationContext, "Berhasi Mempunyai Akun NoStress",Toast.LENGTH_SHORT).show()
-            }
+        if (!isValidEmail(email)) {
+            Toast.makeText(this, "Format email anda salah", Toast.LENGTH_SHORT).show()
+            return
         }
+        if (!isValidPassword(password)) {
+            Toast.makeText(this, "Password Minimal 8 karakter", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnSuccessListener { authResult ->
+                    val ref: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
+                    val userStressId = ref.push().key.toString()
+                    val userStress = UserStress(auth.currentUser?.uid.toString(), username, email, password)
+                    ref.child(userStressId).setValue(userStress)
+                            .addOnSuccessListener {
+                                Toast.makeText(applicationContext, "Berhasi Mempunyai Akun NoStress", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this, LoginActivity::class.java))
+                                finish()
+                            }
+                            .addOnFailureListener {
+                                Log.d("Gagal","DB gagal")
+                                Log.d("Gagal","${it.message}")
+                                Toast.makeText(applicationContext, "Terjadi Kesalahan saat membuat akun", Toast.LENGTH_SHORT).show()
+                            }
+                }
+                .addOnFailureListener {
+                    Log.d("Registerakun", "Failed to create user : ${it.message}")
+                    if (it.message.equals("The email address is badly formatted.")) {
+                        Toast.makeText(this, "Format email salah", Toast.LENGTH_SHORT).show()
+                    } else if (it.message.equals("The email address is already in use by another account.")) {
+                        Toast.makeText(this, "Email sudah pernah digunakan", Toast.LENGTH_SHORT).show()
+                    }
+                }
     }
 }
+
