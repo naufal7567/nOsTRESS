@@ -101,5 +101,17 @@
 
     </LinearLayout>
 
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnTampilkan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bkg"
+        android:text="Tampilkan Hasil"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>

@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_account.*
 import org.nostress.behappy.LoginActivity
 import org.nostress.behappy.R
@@ -16,30 +18,6 @@ import org.nostress.behappy.UserStress
 
 
 class AccountFragment : Fragment() {
-    //(val mCtx : Context, val layoutResId : Int, val userStressList: List<UserStress>) : ArrayAdapter<UserStress>(mCtx,layoutResId, userStressList) {
-// (REFERENSI Lukman)
-
-//    lateinit var auth : FirebaseAuth
-//    var dataReference : DatabaseReference? = null
-//    var database : FirebaseDatabase? = null
-
-
-//    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-//        val LayoutInflater : LayoutInflater = LayoutInflater.from(mCtx)
-//
-//        val view : View = LayoutInflater.inflate(layoutResId, null)
-//
-//        val txt_username_account : TextView =  view.findViewById(R.id.txt_email_account)
-//        val txt_email_account : TextView =  view.findViewById(R.id.txt_email_account)
-//
-//        val userStress : UserStress = userStressList [position]
-//
-//        txt_username_account.text = userStress.username_edittext_register
-//        txt_email_account.text = userStress.email_edittext_register
-//
-//        return view
-//    }
-// (REFERENSI Lukman)
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -48,24 +26,39 @@ class AccountFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_account, container, false)
-    }
 
+//        showAllData
+//        showAllUserData();
+    }
+    private fun getUser(profile:UserStress){
+        txt_username_account.text = profile.firstname + " " + profile.lastname
+        txt_alamat_account.text = profile.alamat
+        txt_ttl_account.text = profile.tempat + " " + profile.tanggal
+        txt_email_account.text = profile.email
+        txt_telpon_account.text = profile.telepon
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        auth = FirebaseAuth.getInstance()
+        var auth = FirebaseAuth.getInstance().currentUser
 //        database = FirebaseDatabase.getInstance()
 //        dataReference = database?.getReference("profil")
 //
 //        loadProfil()
-//
+
         val myRef: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                val value = dataSnapshot.getValue(UserStress::class.java)
-                Log.d("Success", "Value is: $value")
+                dataSnapshot.children.forEach {
+                    val profile = it.getValue<UserStress>()
+                    if (profile != null){
+                        if (profile.uid == auth!!.uid){
+                            getUser(profile)
+                        }
+                    }
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -81,6 +74,7 @@ class AccountFragment : Fragment() {
             }
         }
     }
+
 
 //    private fun loadProfil(){
 //        val user = auth.currentUser

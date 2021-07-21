@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="List Contak Psikolog"
+        android:text="List Kontak Psikolog"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,15 +55,20 @@
         app:layout_constraintStart_toEndOf="@+id/ivPsikolog1"
         app:layout_constraintTop_toBottomOf="@+id/tvNamaPsikolog1" />
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/ivPsikolog2"
-        android:layout_width="108dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/stres_sedang"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog1" />
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="44dp"
+        android:focusable="true"
+        android:src="@drawable/titin"
+        app:civ_border_color="@android:color/holo_orange_light"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#0099FF"
+        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/tvNamaPsikolog2"
@@ -88,15 +93,20 @@
         app:layout_constraintStart_toEndOf="@+id/ivPsikolog2"
         app:layout_constraintTop_toBottomOf="@+id/tvNamaPsikolog2" />
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/ivPsikolog3"
-        android:layout_width="107dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/stres_sedang"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog2" />
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="44dp"
+        android:focusable="true"
+        android:src="@drawable/budi"
+        app:civ_border_color="@android:color/holo_orange_light"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#0099FF"
+        app:layout_constraintTop_toBottomOf="@+id/ivPsikolog2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp" />
 
     <TextView
         android:id="@+id/tvNamaPsikolog3"
@@ -107,7 +117,7 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toEndOf="@+id/ivPsikolog1"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -140,7 +150,7 @@
         android:layout_marginTop="8dp"
         android:autoLink="email"
         android:text="budhyapuak@gmail.com"
-        android:textColor="#2196F3"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toEndOf="@+id/ivPsikolog3"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPsikolog3" />
@@ -149,11 +159,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:autoLink="email"
         android:text="titinflorentina77@gmail.com"
-        android:textColor="#2196F3"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toEndOf="@+id/ivPsikolog2"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPsikolog2" />

@@ -3,19 +3,24 @@ package org.nostress.behappy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_test_k10.*
 
 class TestK10Activity : AppCompatActivity() {
 
     private var positionQuestion = 0
     private var score = 0
+    private var lastQuestion = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_k10)
 
         listPertanyaan()
+
+
     }
 
     private fun listPertanyaan(){
@@ -27,8 +32,11 @@ class TestK10Activity : AppCompatActivity() {
         var jawabanE = findViewById<Button>(R.id.btnE)
 
         jawabanA.setOnClickListener {
-            positionQuestion += 1
-            score += 1
+            lastQuestion += 1
+            if (positionQuestion < 9){
+                positionQuestion += 1
+                score += 1
+            }
 
             pertanyaan.text = listOfQuestion[positionQuestion].pertanyaan
             jawabanA.text = listOfQuestion[positionQuestion].jawabanA
@@ -38,7 +46,9 @@ class TestK10Activity : AppCompatActivity() {
             jawabanE.text = listOfQuestion[positionQuestion].jawabanE
 
 
-            if (positionQuestion == 9){
+
+            if(lastQuestion == 10){
+                score += 1
                 val intent = Intent(this,HasilTestActivity::class.java)
                 intent.putExtra("EXTRA_SCORE",score)
                 startActivity(intent)
@@ -47,8 +57,12 @@ class TestK10Activity : AppCompatActivity() {
         }
 
         jawabanB.setOnClickListener {
-            positionQuestion += 1
-            score += 2
+            lastQuestion += 1
+            if (positionQuestion < 9){
+                positionQuestion += 1
+                score += 2
+            }
+
 
             pertanyaan.text = listOfQuestion[positionQuestion].pertanyaan
             jawabanA.text = listOfQuestion[positionQuestion].jawabanA
@@ -58,7 +72,8 @@ class TestK10Activity : AppCompatActivity() {
             jawabanE.text = listOfQuestion[positionQuestion].jawabanE
 
 
-            if (positionQuestion == 9){
+            if(lastQuestion == 10){
+                score += 2
                 val intent = Intent(this,HasilTestActivity::class.java)
                 intent.putExtra("EXTRA_SCORE",score)
                 startActivity(intent)
@@ -67,9 +82,11 @@ class TestK10Activity : AppCompatActivity() {
         }
 
         jawabanC.setOnClickListener {
-            positionQuestion += 1
-            score += 3
-
+            lastQuestion += 1
+            if (positionQuestion < 9){
+                positionQuestion += 1
+                score += 3
+            }
             pertanyaan.text = listOfQuestion[positionQuestion].pertanyaan
             jawabanA.text = listOfQuestion[positionQuestion].jawabanA
             jawabanB.text = listOfQuestion[positionQuestion].jawabanB
@@ -78,7 +95,8 @@ class TestK10Activity : AppCompatActivity() {
             jawabanE.text = listOfQuestion[positionQuestion].jawabanE
 
 
-            if (positionQuestion == 9){
+            if(lastQuestion == 10){
+                score += 3
                 val intent = Intent(this,HasilTestActivity::class.java)
                 intent.putExtra("EXTRA_SCORE",score)
                 startActivity(intent)
@@ -87,8 +105,11 @@ class TestK10Activity : AppCompatActivity() {
         }
 
         jawabanD.setOnClickListener {
-            positionQuestion += 1
-            score += 4
+            lastQuestion += 1
+            if (positionQuestion < 9){
+                positionQuestion += 1
+                score += 4
+            }
 
             pertanyaan.text = listOfQuestion[positionQuestion].pertanyaan
             jawabanA.text = listOfQuestion[positionQuestion].jawabanA
@@ -97,8 +118,8 @@ class TestK10Activity : AppCompatActivity() {
             jawabanD.text = listOfQuestion[positionQuestion].jawabanD
             jawabanE.text = listOfQuestion[positionQuestion].jawabanE
 
-
-            if (positionQuestion == 9){
+            if(lastQuestion == 10){
+                score += 4
                 val intent = Intent(this,HasilTestActivity::class.java)
                 intent.putExtra("EXTRA_SCORE",score)
                 startActivity(intent)
@@ -107,8 +128,11 @@ class TestK10Activity : AppCompatActivity() {
         }
 
         jawabanE.setOnClickListener {
-            positionQuestion += 1
-            score += 5
+            lastQuestion += 1
+            if (positionQuestion < 9){
+                positionQuestion += 1
+                score += 5
+            }
 
             pertanyaan.text = listOfQuestion[positionQuestion].pertanyaan
             jawabanA.text = listOfQuestion[positionQuestion].jawabanA
@@ -117,7 +141,9 @@ class TestK10Activity : AppCompatActivity() {
             jawabanD.text = listOfQuestion[positionQuestion].jawabanD
             jawabanE.text = listOfQuestion[positionQuestion].jawabanE
 
-            if (positionQuestion == 9){
+
+            if(lastQuestion == 10){
+                score += 5
                 val intent = Intent(this,HasilTestActivity::class.java)
                 intent.putExtra("EXTRA_SCORE",score)
                 startActivity(intent)

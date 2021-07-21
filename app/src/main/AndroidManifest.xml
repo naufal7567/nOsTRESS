@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoStress">
-        <activity android:name=".SolusiStresActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name=".EditUserActivity"></activity>
+        <activity android:name=".PsikologActivity" />
+        <activity
+            android:name=".SolusiStresActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".HasilTestActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

@@ -21,10 +21,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
         replaceFragment(dashboardFragment)
+        val getData = intent.getStringExtra("setFragment").toString()
+
+        if (getData != "") {
+            if (getData == "psikolog") {
+                replaceFragment(psikologFragment)
+            }
+        }
         bottom_nav.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.ic_home -> replaceFragment(dashboardFragment)

@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         login_button_login.setOnClickListener {
-           login()
+            login()
         }
 
         back_to_register_textview.setOnClickListener {
@@ -44,13 +44,13 @@ class LoginActivity : AppCompatActivity() {
         }
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener{
-                if (!it.isSuccessful) return@addOnCompleteListener
+                .addOnCompleteListener{
+                    if (!it.isSuccessful) return@addOnCompleteListener
 
-                Log.d("Loginakun", "Login berhasil");
-                startActivity(Intent(this,MainActivity::class.java))
-                finish()
-            }
+                    Log.d("Loginakun", "Login berhasil");
+                    startActivity(Intent(this,MainActivity::class.java))
+                    finish()
+                }
     }
 
 }
