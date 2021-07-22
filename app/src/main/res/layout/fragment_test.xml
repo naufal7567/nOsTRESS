@@ -48,7 +48,7 @@
         android:shadowRadius="1.5"
         android:textAllCaps="true"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Hasil Test Terakhir"
+        android:text="Hasil Tes Terakhir"
         android:textAlignment="center"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="24sp"
