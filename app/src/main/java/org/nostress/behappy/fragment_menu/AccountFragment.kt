@@ -12,6 +12,7 @@ import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_account.*
+import org.nostress.behappy.EditUserActivity
 import org.nostress.behappy.LoginActivity
 import org.nostress.behappy.R
 import org.nostress.behappy.UserStress
@@ -26,9 +27,6 @@ class AccountFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_account, container, false)
-
-//        showAllData
-//        showAllUserData();
     }
     private fun getUser(profile:UserStress){
         txt_username_account.text = profile.firstname + " " + profile.lastname
@@ -66,6 +64,14 @@ class AccountFragment : Fragment() {
                 Log.w("Gagal", "Failed to read value.", error.toException())
             }
         })
+
+        btn_edit_data.setOnClickListener {
+            activity?.let {
+                val intentEdit = Intent(it, EditUserActivity::class.java)
+                it.startActivity(intentEdit)
+            }
+        }
+
         btn_logout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             activity?.let{
@@ -74,22 +80,4 @@ class AccountFragment : Fragment() {
             }
         }
     }
-
-
-//    private fun loadProfil(){
-//        val user = auth.currentUser
-//        val userRef = dataReference?.child(user?.uid!!)
-//
-//        userRef?.addValueEventListener(object: ValueEventListener{
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                txt_username_account.text = snapshot.child("username").value.toString()
-//                txt_email_account.text = snapshot.child("email").value.toString()
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                TODO("Not yet implemented")
-//            }
-//        })
-//    }
-
 }

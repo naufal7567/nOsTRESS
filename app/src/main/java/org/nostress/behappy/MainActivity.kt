@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             if (getData == "psikolog") {
                 replaceFragment(psikologFragment)
             }
+            if (getData == "account"){
+                replaceFragment(accountFragment)
+            }
         }
         bottom_nav.setOnNavigationItemSelectedListener {
             when(it.itemId){

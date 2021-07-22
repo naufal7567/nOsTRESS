@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_tes_stres"
     tools:context=".HasilTestActivity">
 
     <TextView
@@ -13,6 +14,11 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/poppins"
         android:textStyle="bold"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.2"
+        android:textAllCaps="true"
         android:textColor="#000000"
         android:text="Hasil Tes Tingkat Stres"
         android:textSize="24sp"
@@ -26,9 +32,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.5"
+        android:textAllCaps="true"
         android:fontFamily="sans-serif-medium"
         android:text="Hasil Skor"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_marginTop="32dp"
+        android:textColor="@color/black"
         android:background="@drawable/rounded_button_next"
         android:text="Hubungi Psikolog"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:textColor="@color/black"
         android:layout_marginTop="28dp"
         android:background="@drawable/rounded_button_next"
         android:text="Lihat Solusi Stres"
@@ -91,6 +104,7 @@
             android:id="@+id/tvDeskripsiSkor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:fontFamily="sans-serif-medium"
             android:text="Deskripsi : "
             android:textSize="24sp" />
@@ -99,6 +113,7 @@
             android:id="@+id/tv_desc_stres_rendah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="1  - 15   : Tingkat Stres Rendah"
             android:textSize="18sp" />
 
@@ -106,12 +121,14 @@
             android:id="@+id/tv_desc_stres_sedang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="16 - 30 : Tingkat Stres Sedang"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_desc_stres_tinggi"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:text="31 - 50 : Tingkat Stres Tinggi"
             android:textSize="18sp" />

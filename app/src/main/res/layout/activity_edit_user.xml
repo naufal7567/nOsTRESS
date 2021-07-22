@@ -1,58 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditUserActivity"
-    android:background="@drawable/bg_login"
-    >
+    android:background="@drawable/bg_app"
+    tools:context=".EditUserActivity">
+
 
         <ImageView
             android:id="@+id/iv_logo_fix"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/logo_fix"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvTitle_Register"
+            android:id="@+id/tvTitle_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.5"
+            android:textAllCaps="true"
             android:fontFamily="@font/poppins_bold"
-            android:text="Edit data Profil"
+            android:text="Edit Profil"
             android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="32sp"
+            android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_logo_fix" />
+            app:layout_constraintHorizontal_bias="0.211"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_fix"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvFirstname_register"
+            android:id="@+id/tvFirstname_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="68dp"
             android:fontFamily="@font/poppins"
             android:text="Nama Depan"
             android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="20dp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHorizontal_bias="0.082"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle_Register" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle_edit" />
 
         <EditText
-            android:id="@+id/Firstname_edittext_register"
+            android:id="@+id/Firstname_edittext_edit"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginEnd="14dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/rounded_edittext_login_register"
             android:ems="10"
             android:hint="Masukkan nama depan anda"
@@ -60,10 +69,10 @@
             android:paddingLeft="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvFirstname_register"/>
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstname_edit"/>
 
         <TextView
-            android:id="@+id/tvLastname_register"
+            android:id="@+id/tvLastname_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -72,18 +81,18 @@
             android:text="Nama Belakang"
             android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="20dp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Firstname_edittext_register" />
+            app:layout_constraintTop_toBottomOf="@+id/Firstname_edittext_edit" />
 
         <EditText
-            android:id="@+id/Lastname_edittext_register"
+            android:id="@+id/Lastname_edittext_edit"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginEnd="14dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/rounded_edittext_login_register"
             android:ems="10"
             android:hint="Masukkan nama belakang anda"
@@ -91,79 +100,152 @@
             android:paddingLeft="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLastname_register"/>
-
+            app:layout_constraintTop_toBottomOf="@+id/tvLastname_edit"/>
 
         <TextView
-            android:id="@+id/tvTempatLahir_register"
+            android:id="@+id/tvTempatLahir_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
-            android:text="Tempat"
+            android:text="Tempat Lahir"
             android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="20dp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHorizontal_bias="0.058"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Lastname_edittext_register" />
+            app:layout_constraintTop_toBottomOf="@+id/Lastname_edittext_edit" />
 
         <EditText
-            android:id="@+id/Tempat_edittext_register"
+            android:id="@+id/Tempat_edittext_edit"
             android:layout_width="180dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/rounded_edittext_login_register"
             android:ems="10"
             android:hint="Tempat lahir"
-            android:inputType="textEmailAddress"
             android:paddingLeft="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTempatLahir_register" />
-
-        <Button
-            android:id="@+id/register_button_register"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:background="@drawable/rounded_button"
-            android:text="Simpan"
-            android:textColor="@android:color/holo_orange_light"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/password_edittext_register"
-            app:layout_constraintStart_toStartOf="@+id/Tempat_edittext_register"
-            app:layout_constraintTop_toBottomOf="@+id/password_edittext_register" />
-
+            app:layout_constraintTop_toBottomOf="@+id/tvTempatLahir_edit" />
 
         <TextView
-            android:id="@+id/tvTanggal_register"
+            android:id="@+id/tvTanggal_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
             android:text="Tanggal Lahir"
             android:textAlignment="center"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="20dp"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.699"
-            app:layout_constraintStart_toEndOf="@+id/tvTempatLahir_register"
-            app:layout_constraintTop_toBottomOf="@+id/Lastname_edittext_register" />
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toEndOf="@+id/tvTempatLahir_edit"
+            app:layout_constraintTop_toBottomOf="@+id/Lastname_edittext_edit" />
 
         <EditText
-            android:id="@+id/password_edittext_register"
+            android:id="@+id/Tanggal_edittext_edit"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/rounded_edittext_login_register"
             android:ems="10"
+            android:editable="false"
             android:hint="Tanggal lahir"
-            android:inputType="textPassword"
             android:paddingLeft="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/Tempat_edittext_register"
-            app:layout_constraintTop_toBottomOf="@+id/tvTanggal_register" />
+            app:layout_constraintStart_toEndOf="@+id/Tempat_edittext_edit"
+            app:layout_constraintTop_toBottomOf="@+id/tvTanggal_edit" />
+
+        <TextView
+            android:id="@+id/tvTelepon_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="8dp"
+            android:text="Nomor Telepon"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alamat_edittext_edit" />
+
+        <EditText
+            android:id="@+id/telepon_edittext_edit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:background="@drawable/rounded_edittext_login_register"
+            android:ems="10"
+            android:hint="Masukkan nomor telepon anda"
+            android:inputType="number"
+            android:paddingLeft="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/Lastname_edittext_edit"
+
+            app:layout_constraintStart_toStartOf="@+id/Lastname_edittext_edit"
+            app:layout_constraintTop_toBottomOf="@+id/tvTelepon_edit" />
+
+        <TextView
+            android:id="@+id/tvalamat_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="8dp"
+            android:text="Alamat"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tempat_edittext_edit" />
+
+        <EditText
+            android:id="@+id/alamat_edittext_edit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:background="@drawable/rounded_edittext_login_register"
+            android:ems="10"
+            android:hint="Masukkan alamat anda"
+            android:paddingLeft="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/Lastname_edittext_edit"
+
+            app:layout_constraintStart_toStartOf="@+id/Lastname_edittext_edit"
+            app:layout_constraintTop_toBottomOf="@+id/tvalamat_edit" />
 
 
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:text="Simpan Data"
+            android:textColor="@android:color/holo_orange_light"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/telepon_edittext_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/telepon_edittext_edit"
+            app:layout_constraintTop_toBottomOf="@+id/telepon_edittext_edit" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_batal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_button"
+            android:text="Batalkan"
+            android:textColor="@android:color/holo_orange_light"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/telepon_edittext_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/telepon_edittext_edit"
+            app:layout_constraintTop_toBottomOf="@+id/btn_simpan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,9 +52,7 @@ class RegisterActivity : AppCompatActivity() {
         tempat_edittext_register = findViewById(R.id.Tempat_edittext_register)
         alamat_edittext_register = findViewById(R.id.alamat_edittext_register)
         telepon_edittext_register = findViewById(R.id.telepon_edittext_register)
-
         email_edittext_register = findViewById(R.id.email_edittext_register)
-
         password_edittext_register = findViewById(R.id.password_edittext_register)
         register_button_register = findViewById(R.id.register_button_register)
 
@@ -123,7 +121,7 @@ class RegisterActivity : AppCompatActivity() {
                 .addOnSuccessListener { authResult ->
                     val ref: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
                     val userStressId = ref.push().key.toString()
-                    val userStress = UserStress(auth.currentUser?.uid.toString(), firstname, lastname, tempat, tanggal, alamat, telepon,  email, password)
+                    val userStress = UserStress(auth.currentUser?.uid.toString(), firstname, lastname, tempat, tanggal, telepon, alamat,  email, password)
                     ref.child(userStressId).setValue(userStress)
                             .addOnSuccessListener {
                                 Toast.makeText(applicationContext, "Berhasi Mempunyai Akun NoStress", Toast.LENGTH_SHORT).show()

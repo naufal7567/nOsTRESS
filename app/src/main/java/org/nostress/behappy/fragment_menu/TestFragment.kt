@@ -31,27 +31,39 @@ class TestFragment : Fragment() {
 
     private fun getScore(scores : ArrayList<UserScore>){
 
-        val size = scores.size
+            val size = scores.size
 
-        if (size >= 3){
-            tvSkor1.text = scores.get(size-1).score.toString()
-            tvSkor2.text = scores.get(size-2).score.toString()
-            tvSkor3.text = scores.get(size-3).score.toString()
-        }
-        else if (size >= 2){
-            tvSkor1.text = scores.get(size-1).score.toString()
-            tvSkor2.text = scores.get(size-2).score.toString()
-            tvSkor3.visibility = View.INVISIBLE
-        }
-        else if (size >= 1){
-            tvSkor1.text = scores.get(size-1).score.toString()
-            tvSkor2.visibility = View.INVISIBLE
-            tvSkor3.visibility = View.INVISIBLE
-        }
+            if (size >= 3){
+                tvSkor1.text = scores.get(size-1).score.toString()
+                tvSkor2.text = scores.get(size-2).score.toString()
+                tvSkor3.text = scores.get(size-3).score.toString()
+                tvBelum.visibility = View.INVISIBLE
+                tvSkor1.visibility = View.VISIBLE
+                tvSkor2.visibility = View.VISIBLE
+                tvSkor3.visibility = View.VISIBLE
+            }
+            else if (size >= 2){
+
+                tvSkor1.text = scores.get(size-1).score.toString()
+                tvSkor2.text = scores.get(size-2).score.toString()
+                tvBelum.visibility = View.INVISIBLE
+                tvSkor1.visibility = View.VISIBLE
+                tvSkor2.visibility = View.VISIBLE
+                tvSkor3.visibility = View.INVISIBLE
+            }
+            else if (size >= 1){
+                tvSkor1.text = scores.get(size-1).score.toString()
+                tvBelum.visibility = View.INVISIBLE
+                tvSkor1.visibility = View.VISIBLE
+                tvSkor2.visibility = View.INVISIBLE
+                tvSkor3.visibility = View.INVISIBLE
+            }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         var auth = FirebaseAuth.getInstance().currentUser
         val arrayListScore = ArrayList<UserScore>()
