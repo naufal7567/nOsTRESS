@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_dashboard.*
+import org.nostress.behappy.EditUserActivity
 import org.nostress.behappy.LoginActivity
 import org.nostress.behappy.R
 import org.nostress.behappy.SolusiStresActivity
@@ -58,12 +59,25 @@ class DashboardFragment : Fragment() {
             transaction?.commit()
         }
 
-        btn_solusi_stres.setOnClickListener {
-            activity?.let{
-                val intent = Intent (it, SolusiStresActivity::class.java)
-                it.startActivity(intent)
+        btn_mengelola_stres.setOnClickListener {
+
+                val transaction = fragmentManager?.beginTransaction()
+                transaction?.replace(R.id.fragment_container, MengelolaStresFragment())
+                transaction?.commit()
+
+        }
+
+        btn_latihan_pernafasan.setOnClickListener {
+            activity?.let {
+                val intentSolusi = Intent(it, SolusiStresActivity::class.java)
+                it.startActivity(intentSolusi)
             }
         }
+
+        btn_pendapat_psikolog.setOnClickListener {
+
+        }
+
     }
 
 

@@ -13,7 +13,8 @@
         <TextView
             android:id="@+id/tvTitle_Dashboard"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:shadowColor="#000000"
             android:shadowDx="1.5"
             android:shadowDy="1.3"
@@ -34,12 +35,12 @@
             android:layout_below="@id/tvTitle_Dashboard"
             android:layout_marginTop="8dp"
             android:columnCount="2"
-            android:rowCount="3">
+            android:rowCount="4">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_Pengertian_stres"
                     android:layout_width="wrap_content"
-                    android:layout_height="180dp"
+                    android:layout_height="200dp"
                     android:layout_row="0"
                     android:layout_rowWeight="1"
                     android:layout_column="0"
@@ -63,7 +64,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_ringan"
+                                    android:src="@drawable/title_pengertian"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -106,7 +107,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_sedang"
+                                    android:src="@drawable/title_gejala"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -125,7 +126,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_penyebab_stres"
                     android:layout_width="wrap_content"
-                    android:layout_height="180dp"
+                    android:layout_height="200dp"
                     android:layout_row="1"
                     android:layout_rowWeight="1"
                     android:layout_column="0"
@@ -149,7 +150,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_berat"
+                                    android:src="@drawable/title_penyebab"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -192,7 +193,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_ringan"
+                                    android:src="@drawable/title_dampak"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -211,7 +212,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_tingkatan_stres"
                     android:layout_width="wrap_content"
-                    android:layout_height="180dp"
+                    android:layout_height="200dp"
                     android:layout_row="2"
                     android:layout_rowWeight="1"
                     android:layout_column="0"
@@ -235,7 +236,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_ringan"
+                                    android:src="@drawable/title_tingkatan"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -252,7 +253,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/btn_solusi_stres"
+                    android:id="@+id/btn_mengelola_stres"
                     android:layout_width="wrap_content"
                     android:layout_height="180dp"
                     android:layout_row="2"
@@ -278,7 +279,7 @@
                                     android:layout_height="150dp"
                                     android:layout_centerHorizontal="true"
                                     android:focusable="true"
-                                    android:src="@drawable/stres_berat"
+                                    android:src="@drawable/title_mengelola"
                                     app:civ_border_color="@android:color/holo_orange_light"
                                     app:civ_border_width="4dp"
                                     app:civ_shadow="true"
@@ -288,11 +289,99 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins"
-                                    android:text="Cara Mengelola Stres"
+                                    android:text="Mengelola Stres"
                                     android:textColor="#000000"
                                     android:textSize="16sp" />
                         </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_latihan_pernafasan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_row="3"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/iv_latihan_pernafasan"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:focusable="true"
+                                    android:src="@drawable/nafas_title"
+                                    app:civ_border_color="@android:color/holo_orange_light"
+                                    app:civ_border_width="4dp"
+                                    app:civ_shadow="true"
+                                    app:civ_shadow_color="#0099FF" />
+
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Latihan Napas\nDalam"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_pendapat_psikolog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:layout_row="3"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="8dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:id="@+id/iv_pendapat_psikolog"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:focusable="true"
+                                    android:src="@drawable/title_psikolog"
+                                    app:civ_border_color="@android:color/holo_orange_light"
+                                    app:civ_border_width="4dp"
+                                    app:civ_shadow="true"
+                                    app:civ_shadow_color="#0099FF" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Pendapat Psikolog"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
         </GridLayout>
 
 

@@ -3,6 +3,8 @@
     package="org.nostress.behappy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoStress">
-        <activity android:name=".EditUserActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name=".PendapatPsikologActivity"></activity>
+        <activity
+            android:name=".EditUserActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".SolusiStresActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

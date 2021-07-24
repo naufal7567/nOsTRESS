@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_dasboard"
-    tools:context=".fragment_info_stres.GejalaStresFragment">
+    tools:context=".PendapatPsikologActivity">
 
     <TextView
         android:id="@+id/tvTitle_Solusi"
@@ -19,7 +19,7 @@
         android:textAllCaps="true"
         android:gravity="center"
         android:fontFamily="@font/poppins_bold"
-        android:text="Latihan Napas Dalam"
+        android:text="Pendapat Psikolog"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="24dp"

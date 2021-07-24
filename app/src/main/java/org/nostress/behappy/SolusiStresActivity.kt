@@ -43,24 +43,24 @@ class SolusiStresActivity : AppCompatActivity() {
     private fun postToList (){
         for (i in 0..0){
             addToList(
-                "Mendekatkan diri kepada tuhan",
-                R.drawable.pray_solusi
+                "Latihan pernapasan dalam diyakini dapat mengurangi stres. \n\nGeser ke kanan untuk memulai latihan pernapasan dalam.",
+                R.drawable.nafas_title
             )
             addToList(
-                "Mengikuti komunitas keagamaan dan komunitas belajar",
-                R.drawable.comunity_solusi
+                "Tarik napas pelan-pelan melalui hidung, mulut ditutup. Ambil napas dalam, lembut dan pelan.",
+                R.drawable.nafas1
             )
             addToList(
-                "Berpikir positif dan berusaha mengendalikan emosi negatif",
-                R.drawable.positif_thinking_solusi
+                "Saat menarik napas, dorong perut ke arah tangan dan rasakan perut mengembang. Tahan selama 2 detik.",
+                R.drawable.nafas2
             )
             addToList(
-                "Sharing masalah yang dihadapi dengan kerabat dekat",
-                R.drawable.sharing_solusi
+                "Keluarkan napas perlahan melalui hidung, rasakan perut mulai melemas dan turunkan tangan",
+                R.drawable.nafas3
             )
             addToList(
-                "Ikut kegiatan sosial",
-                R.drawable.sosial_activity_solusi
+                "Ulangi 5 sampai 10 kali untuk hasil yang lebih maksimal.",
+                R.drawable.nafas4
             )
         }
     }

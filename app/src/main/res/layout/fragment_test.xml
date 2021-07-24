@@ -1,30 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_tes_stres"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".fragment_menu.TestFragment"
-    android:background="@drawable/bg_tes_stres">
+    >
+
+    <TextView
+        android:id="@+id/tvTitle_Dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.5"
+        android:text="Screening Tes"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_tesk10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:textColor="@color/black"
         android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="12dp"
         android:text="Apakah anda sering mengalami stres ? \n\n Kerjakan tes berikut untuk mengetahui \ntingkatan stres yang kamu alami"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle_Dashboard" />
 
     <Button
         android:id="@+id/btn_mulai_tes"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="@drawable/rounded_button_small"
@@ -41,19 +67,18 @@
         android:id="@+id/tvHasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/poppins_semibold"
         android:shadowColor="#000000"
         android:shadowDx="1.5"
         android:shadowDy="1.3"
         android:shadowRadius="1.5"
-        android:textAllCaps="true"
-        android:fontFamily="@font/poppins_semibold"
         android:text="Hasil Tes Terakhir"
         android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_mulai_tes" />
 
@@ -73,15 +98,14 @@
 
     <TextView
         android:id="@+id/tvSkor1"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
         android:text="Hasil 1"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHasil" />
@@ -119,3 +143,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tvSkor2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

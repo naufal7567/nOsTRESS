@@ -50,7 +50,7 @@ class PenyebabStresFragment : Fragment() {
             )
             addToList(
                 "Stresor Internal",
-                "Stresor internal merupakan stresor yang berasal dari dalam individu seperti stresor psikologis dan stresor biologis. Stresor psikologis yaitu tekanan dari dalam diri individu yang biasanya bersifat negatif seperti frustasi, kecemasan, rasa bersalah, kuatir berlebihan, marah, benci, sedih, cemburu, rasa kasihan pada diri sendiri, serta rasa rendah diri. Stresor biologis seperti pelepasan neurotransmiiters saat stres dari kelenjar adrenal, medula yaitu epinefri dan norepinefrin dalam respon terhadap stres. Pelepasan neurotransmitter menyebabkan efek fisiologis seperti denyut jantung meningkat, peningkatan kewaspadaan, dan lain-lain.",
+                "Stresor internal merupakan stresor yang berasal dari dalam individu seperti stresor psikologis dan stresor biologis. Stresor psikologis yaitu tekanan dari dalam diri individu yang biasanya bersifat negatif seperti frustasi, kecemasan, rasa bersalah, kuatir berlebihan, marah, benci, sedih, cemburu, rasa kasihan pada diri sendiri, serta rasa rendah diri. Stresor biologis disebabkan oleh pelepasan neurotransmiiters yang mengakibatkan efek fisiologis seperti denyut jantung meningkat, peningkatan kewaspadaan, dan lain-lain.",
                 R.drawable.stresor_internal
             )
             addToList(
