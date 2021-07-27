@@ -29,10 +29,10 @@
         />
 
     <VideoView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
         android:layout_below="@id/tvTitle_Solusi"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="34dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/videoView1"/>
 
@@ -54,17 +54,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_judul"
-        android:text="Titin Florentina P., M. Psi., Psikolog"
+        android:textAlignment="center"
+        android:text="Oleh\nTitin Florentina P., M. Psi., Psikolog"
         android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="16dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         />
 
     <VideoView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
         android:layout_below="@id/tv_desc"
         android:layout_marginTop="24dp"
         android:layout_centerHorizontal="true"
@@ -88,12 +89,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_judul2"
-        android:text="Titin Florentina P., M. Psi., Psikolog"
+        android:textAlignment="center"
+        android:text="Oleh\nTitin Florentina P., M. Psi., Psikolog"
         android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="16dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         />
 
     <Button

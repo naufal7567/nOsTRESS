@@ -35,7 +35,7 @@ class PendapatPsikologActivity : AppCompatActivity() {
     }
 
     private fun videoView2() {
-        val videoView = findViewById<VideoView>(R.id.videoView1)
+        val videoView = findViewById<VideoView>(R.id.videoView2)
         val mediaController = MediaController(this)
         mediaController.setAnchorView(videoView)
 
@@ -48,13 +48,13 @@ class PendapatPsikologActivity : AppCompatActivity() {
     private fun videoView1(){
 
         val videoView = findViewById<VideoView>(R.id.videoView1)
-        val mediaController = MediaController(this)
-        mediaController.setAnchorView(videoView)
+        val mediaController1 = MediaController(this)
+        mediaController1.setAnchorView(videoView)
 
-        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres}")
+        val videoUri1 = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres}")
 
-        videoView.setMediaController(mediaController)
-        videoView.setVideoURI(videoUri)
+        videoView.setMediaController(mediaController1)
+        videoView.setVideoURI(videoUri1)
     }
 
 
