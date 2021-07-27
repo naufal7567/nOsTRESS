@@ -7,10 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_dashboard.*
-import org.nostress.behappy.EditUserActivity
-import org.nostress.behappy.LoginActivity
-import org.nostress.behappy.R
-import org.nostress.behappy.SolusiStresActivity
+import org.nostress.behappy.*
 import org.nostress.behappy.fragment_info_stres.*
 
 
@@ -75,7 +72,10 @@ class DashboardFragment : Fragment() {
         }
 
         btn_pendapat_psikolog.setOnClickListener {
-
+            activity?.let {
+                val intentSolusi = Intent(it, PendapatPsikologActivity::class.java)
+                it.startActivity(intentSolusi)
+            }
         }
 
     }

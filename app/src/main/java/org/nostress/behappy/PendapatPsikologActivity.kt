@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.viewpager2.widget.ViewPager2
+import kotlinx.android.synthetic.main.activity_pendapat_psikolog.*
 import kotlinx.android.synthetic.main.activity_solusi_stres.*
+import kotlinx.android.synthetic.main.activity_solusi_stres.btn_to_menu
 import kotlinx.android.synthetic.main.activity_solusi_stres.indicator
 import kotlinx.android.synthetic.main.activity_solusi_stres.viewpager_gejala_stres
 import kotlinx.android.synthetic.main.fragment_gejala_stres.*
@@ -23,10 +25,36 @@ class PendapatPsikologActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pendapat_psikolog)
 
 
+        videoView1()
+        videoView2()
+
         btn_to_menu.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
+    }
+
+    private fun videoView2() {
+        val videoView = findViewById<VideoView>(R.id.videoView1)
+        val mediaController = MediaController(this)
+        mediaController.setAnchorView(videoView)
+
+        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.mengelola_stres}")
+
+        videoView.setMediaController(mediaController)
+        videoView.setVideoURI(videoUri)
+    }
+
+    private fun videoView1(){
+
+        val videoView = findViewById<VideoView>(R.id.videoView1)
+        val mediaController = MediaController(this)
+        mediaController.setAnchorView(videoView)
+
+        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres}")
+
+        videoView.setMediaController(mediaController)
+        videoView.setVideoURI(videoUri)
     }
 
 

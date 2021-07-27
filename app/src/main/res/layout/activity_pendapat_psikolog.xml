@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_dasboard"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_dasboard"
     tools:context=".PendapatPsikologActivity">
 
     <TextView
@@ -25,30 +28,84 @@
         android:textSize="24dp"
         />
 
-    <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_above="@+id/btn_to_menu"
-        app:ci_drawable="@drawable/circle_indicator"
+    <VideoView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvTitle_Solusi"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/videoView1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoView1"
+        android:text="Pengertian Stres"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:id="@+id/tv_judul"
         />
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager_gejala_stres"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/tvTitle_Solusi"
-        android:layout_above="@+id/indicator"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_judul"
+        android:text="Titin Florentina P., M. Psi., Psikolog"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <VideoView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/videoView2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoView2"
+        android:text="Mengelola Stres"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:id="@+id/tv_judul2"
+        />
+
+    <TextView
+        android:id="@+id/tv_desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_judul2"
+        android:text="Titin Florentina P., M. Psi., Psikolog"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+
     <Button
         android:id="@+id/btn_to_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_marginTop="28dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_desc2"
         android:textColor="@android:color/holo_orange_light"
         android:background="@drawable/rounded_button_next"
         android:text="Kembali ke beranda" />
 
 </RelativeLayout>
+</ScrollView>

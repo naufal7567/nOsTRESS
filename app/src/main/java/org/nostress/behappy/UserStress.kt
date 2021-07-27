@@ -1,7 +1,11 @@
 package org.nostress.behappy
 
+import android.os.Parcelable
 import com.google.firebase.database.Exclude
+import kotlinx.android.parcel.Parcelize
 
+
+@Parcelize
 data class UserStress(
         val uid: String = "",
         val firstname: String = "",
@@ -12,4 +16,7 @@ data class UserStress(
         val alamat: String = "",
         val email: String = "",
         val password: String = ""
-)
+):Parcelable{
+        @get:Exclude
+        var idUser: String = ""
+}

@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoStress">
-        <activity android:name=".PendapatPsikologActivity"></activity>
+        <activity android:name=".ForgetPassword"></activity>
+        <activity android:name=".EditPasswordActivity" />
+        <activity
+            android:name=".PendapatPsikologActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".EditUserActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

@@ -28,6 +28,11 @@ class LoginActivity : AppCompatActivity() {
             login()
         }
 
+        tvForgetPassword.setOnClickListener {
+            startActivity(Intent(this, ForgetPassword::class.java))
+            finish()
+        }
+
         back_to_register_textview.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
             finish()
