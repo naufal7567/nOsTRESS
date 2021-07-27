@@ -67,7 +67,7 @@ class EditPasswordActivity : AppCompatActivity() {
                 }
             }
 
-            btn_batal_simpan.setOnClickListener {
+            btn_batal_simpan_pass.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("setFragment", "account")
                 startActivity(intent)

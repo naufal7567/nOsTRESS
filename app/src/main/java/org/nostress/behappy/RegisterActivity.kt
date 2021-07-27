@@ -103,7 +103,7 @@ class RegisterActivity : AppCompatActivity() {
         val email = email_edittext_register.text.toString().trim()
         val password = password_edittext_register.text.toString().trim()
 
-        if (firstname.isEmpty() && lastname.isEmpty() && tempat.isEmpty() && tanggal.isEmpty() && alamat.isEmpty() && telepon.isEmpty() && email.isEmpty() && password.isEmpty()) {
+        if (firstname.isEmpty() || lastname.isEmpty() || tempat.isEmpty() || tanggal.isEmpty() || alamat.isEmpty() || telepon.isEmpty() || email.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Harap isi semua data", Toast.LENGTH_SHORT).show()
             return
         }
