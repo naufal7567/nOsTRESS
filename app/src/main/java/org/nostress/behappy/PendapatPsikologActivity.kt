@@ -53,26 +53,6 @@ class PendapatPsikologActivity : AppCompatActivity() {
             }
         }
 
-        ivThumbnail4.setOnClickListener {
-            ivThumbnail4.visibility = View.INVISIBLE
-            videoView4.visibility = View.VISIBLE
-            videoView4()
-            videoView4.setOnCompletionListener {
-                videoView4.visibility = View.INVISIBLE
-                ivThumbnail4.visibility = View.VISIBLE
-            }
-        }
-
-        ivThumbnail5.setOnClickListener {
-            ivThumbnail5.visibility = View.INVISIBLE
-            videoView5.visibility = View.VISIBLE
-            videoView5()
-            videoView5.setOnCompletionListener {
-                videoView5.visibility = View.INVISIBLE
-                ivThumbnail5.visibility = View.VISIBLE
-            }
-        }
-
         btn_to_menu.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             finish()
@@ -84,7 +64,7 @@ class PendapatPsikologActivity : AppCompatActivity() {
         val mediaController = MediaController(this)
         mediaController.setAnchorView(videoView)
 
-        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.mengelola_stres}")
+        val videoUri = Uri.parse("android.resource://$packageName/${R.raw.mengelola_stres_pak_budi}")
 
         videoView.setMediaController(mediaController)
         videoView.setVideoURI(videoUri)
@@ -112,7 +92,7 @@ class PendapatPsikologActivity : AppCompatActivity() {
         val mediaController3 = MediaController(this)
         mediaController3.setAnchorView(videoView)
 
-        val videoUri3 = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres_pak_budi}")
+        val videoUri3 = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres}")
 
         videoView.setMediaController(mediaController3)
         videoView.setVideoURI(videoUri3)
@@ -120,33 +100,6 @@ class PendapatPsikologActivity : AppCompatActivity() {
         videoView.start()
     }
 
-    private fun videoView4(){
-
-        val videoView = findViewById<VideoView>(R.id.videoView4)
-        val mediaController4 = MediaController(this)
-        mediaController4.setAnchorView(videoView)
-
-        val videoUri4 = Uri.parse("android.resource://$packageName/${R.raw.tingkatan_stres_pak_budi}")
-
-        videoView.setMediaController(mediaController4)
-        videoView.setVideoURI(videoUri4)
-        videoView.requestFocus()
-        videoView.start()
-    }
-
-    private fun videoView5(){
-
-        val videoView = findViewById<VideoView>(R.id.videoView5)
-        val mediaController5 = MediaController(this)
-        mediaController5.setAnchorView(videoView)
-
-        val videoUri5 = Uri.parse("android.resource://$packageName/${R.raw.mengelola_stres_pak_budi}")
-
-        videoView.setMediaController(mediaController5)
-        videoView.setVideoURI(videoUri5)
-        videoView.requestFocus()
-        videoView.start()
-    }
 
 
 }
