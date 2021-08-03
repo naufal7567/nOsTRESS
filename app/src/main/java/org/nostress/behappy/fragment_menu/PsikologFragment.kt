@@ -28,7 +28,7 @@ class PsikologFragment : Fragment() {
             }
             val intent = Intent(Intent.ACTION_SEND).apply {
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("deargilby@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Surat Konsultasi NoStress")
+                putExtra(Intent.EXTRA_SUBJECT, "Email Konsultasi NoStress")
                 selector = selectorIntent
             }
             startActivity(Intent.createChooser(intent, "Tess"))
@@ -39,7 +39,7 @@ class PsikologFragment : Fragment() {
             }
             val intent = Intent(Intent.ACTION_SEND).apply {
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("titinflorentina77@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Surat Konsultasi NoStress")
+                putExtra(Intent.EXTRA_SUBJECT, "Email Konsultasi NoStress")
                 selector = selectorIntent
             }
             startActivity(Intent.createChooser(intent, "Tess 2"))
@@ -50,7 +50,7 @@ class PsikologFragment : Fragment() {
             }
             val intent = Intent(Intent.ACTION_SEND).apply {
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("budhyapuak@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Surat Konsultasi NoStress")
+                putExtra(Intent.EXTRA_SUBJECT, "Email Konsultasi NoStress")
                 selector = selectorIntent
             }
             startActivity(Intent.createChooser(intent, "Tess 3"))
@@ -61,7 +61,7 @@ class PsikologFragment : Fragment() {
             }
             val intent = Intent(Intent.ACTION_SEND).apply {
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("herawatyaminullah@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Surat Konsultasi NoStress")
+                putExtra(Intent.EXTRA_SUBJECT, "Email Konsultasi NoStress")
                 selector = selectorIntent
             }
             startActivity(Intent.createChooser(intent, "Tess 4"))
