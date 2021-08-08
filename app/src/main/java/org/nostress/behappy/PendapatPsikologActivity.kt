@@ -43,16 +43,6 @@ class PendapatPsikologActivity : AppCompatActivity() {
             }
         }
 
-        ivThumbnail3.setOnClickListener {
-            ivThumbnail3.visibility = View.INVISIBLE
-            videoView3.visibility = View.VISIBLE
-            videoView3()
-            videoView3.setOnCompletionListener {
-                videoView3.visibility = View.INVISIBLE
-                ivThumbnail3.visibility = View.VISIBLE
-            }
-        }
-
         btn_to_menu.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             finish()
@@ -85,21 +75,5 @@ class PendapatPsikologActivity : AppCompatActivity() {
         videoView.requestFocus()
         videoView.start()
     }
-
-    private fun videoView3(){
-
-        val videoView = findViewById<VideoView>(R.id.videoView3)
-        val mediaController3 = MediaController(this)
-        mediaController3.setAnchorView(videoView)
-
-        val videoUri3 = Uri.parse("android.resource://$packageName/${R.raw.pengertian_stres}")
-
-        videoView.setMediaController(mediaController3)
-        videoView.setVideoURI(videoUri3)
-        videoView.requestFocus()
-        videoView.start()
-    }
-
-
 
 }
