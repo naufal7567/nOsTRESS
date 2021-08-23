@@ -11,6 +11,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.nostress.behappy.fragment_menu.PsikologFragment
+import java.text.DateFormat
+import java.util.*
 
 class HasilTestActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
@@ -21,10 +23,13 @@ class HasilTestActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        val date = Calendar.getInstance()
+        val currentDate = DateFormat.getDateInstance(DateFormat.SHORT).format(date.time)
+
         val extraScore =intent.getIntExtra("EXTRA_SCORE", 0)
         val ref: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserScore")
         val userStressId = ref.push().key.toString()
-        val userStress = UserScore(auth.currentUser?.uid.toString(), extraScore)
+        val userStress = UserScore(auth.currentUser?.uid.toString(), currentDate, extraScore)
         ref.child(userStressId).setValue(userStress)
                 .addOnSuccessListener {
                     Toast.makeText(applicationContext, "Berhasi Menyimpan Skor", Toast.LENGTH_SHORT)

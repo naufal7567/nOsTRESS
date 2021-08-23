@@ -13,11 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoStress">
-        <activity android:name=".ForgetPassword"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
-        <activity android:name=".EditPasswordActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"
-            />
+        <activity android:name=".ScreeningTestActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ForgetPassword"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".EditPasswordActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".PendapatPsikologActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

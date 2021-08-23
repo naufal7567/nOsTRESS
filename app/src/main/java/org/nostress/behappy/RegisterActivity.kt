@@ -36,8 +36,6 @@ class RegisterActivity : AppCompatActivity() {
     private val formatter = SimpleDateFormat("dd-MM-yyyy")
     private var pilihTanggal = Calendar.getInstance()
 
-//    var dataReference : DatabaseReference? = null
-//    var database : FirebaseDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,9 +53,6 @@ class RegisterActivity : AppCompatActivity() {
         email_edittext_register = findViewById(R.id.email_edittext_register)
         password_edittext_register = findViewById(R.id.password_edittext_register)
         register_button_register = findViewById(R.id.register_button_register)
-
-//        database = FirebaseDatabase.getInstance()
-//        dataReference = datafinbase?.getReference("profil")
 
         pickDate()
 

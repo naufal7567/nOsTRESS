@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_tes_stres"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScreeningTestActivity">
+
+    <TextView
+        android:id="@+id/tvTitle_Dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.5"
+        android:text="Cara mengerjakan\nScreening test"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tesk10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="12dp"
+        android:text=" 1. Pilihlah jawaban yang sesuai dengan apa\n\t\t yang kamu alami\n 2. Setiap jawaban memiliki penjelasan \n\t\t sebagai berikut : \n \t\ta. Tidak Pernah (Kamu tidak pernah\n\t\t\tmengalami hal yang ditanyakan\n\t\t\tdalam 4 minggu terakhir)
+\n\t\tb. Jarang (Kamu mengalami hal yang \n\t\t\tditanyakan 2-3x dalam 4 minggu\n\t\t\tterakhir)\n\t\tc. Kadang - kadang (Kamu mengalami \n\t\t\thal yang ditanyakan 4-5x dalam 4 \n\t\t\tminggu terakhir)
+\n\t\td. Sering (Kamu mengalami hal yang \n\t\t\tditanyakan 6-8x dalam 4 minggu\n\t\t\tterakhir)\n\t\te. Selalu (Kamu mengalami hal yang\n\t\t\tditanyakan 10x atau lebih dalam 4 \n\t\t\tminggu terakhir)"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle_Dashboard" />
+
+    <Button
+        android:id="@+id/btn_mulai"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_button_small"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="8dp"
+        android:text="Mulai Tes"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tesk10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

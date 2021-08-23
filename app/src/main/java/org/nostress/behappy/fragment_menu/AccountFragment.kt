@@ -51,10 +51,7 @@ class AccountFragment : Fragment() {
 
 
         var auth = FirebaseAuth.getInstance().currentUser
-//        database = FirebaseDatabase.getInstance()
-//        dataReference = database?.getReference("profil")
-//
-//        loadProfil()
+
 
         val myRef: DatabaseReference = FirebaseDatabase.getInstance().getReference("UserStress")
         myRef.addValueEventListener(object : ValueEventListener {

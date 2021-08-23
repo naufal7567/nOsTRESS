@@ -56,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this,MainActivity::class.java))
                     finish()
                 }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Email atau Password anda salah !!!", Toast.LENGTH_SHORT).show()
+                }
     }
-
 }
