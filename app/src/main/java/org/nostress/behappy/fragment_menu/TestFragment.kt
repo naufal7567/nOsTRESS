@@ -33,9 +33,9 @@ class TestFragment : Fragment() {
             val date = dates.size
 
             if (size >= 3){
-                tvSkor1.text =  dates.get(size-1).date.toString() +" " + scores.get(size-1).score.toString()
-                tvSkor2.text = dates.get(size-2).date.toString() +" " + scores.get(size-2).score.toString()
-                tvSkor3.text = dates.get(size-3).date.toString() +" " + scores.get(size-3).score.toString()
+                tvSkor1.text = "Tanggal " + dates.get(size-1).date.toString() +"\n Skor " + scores.get(size-1).score.toString()
+                tvSkor2.text ="Tanggal " + dates.get(size-2).date.toString() +"\n Skor " +  scores.get(size-2).score.toString()
+                tvSkor3.text = "Tanggal " + dates.get(size-3).date.toString() +"\n Skor " + scores.get(size-3).score.toString()
                 tvBelum.visibility = View.INVISIBLE
                 tvSkor1.visibility = View.VISIBLE
                 tvSkor2.visibility = View.VISIBLE
@@ -43,15 +43,15 @@ class TestFragment : Fragment() {
             }
             else if (size >= 2){
 
-                tvSkor1.text = dates.get(size-1).date.toString() +" " + scores.get(size-1).score.toString()
-                tvSkor2.text = dates.get(size-2).date.toString() +" " + scores.get(size-2).score.toString()
+                tvSkor1.text = "Tanggal " + dates.get(size-1).date.toString() +"\n Skor " + scores.get(size-1).score.toString()
+                tvSkor2.text = "Tanggal " + dates.get(size-2).date.toString() +"\n Skor " + scores.get(size-2).score.toString()
                 tvBelum.visibility = View.INVISIBLE
                 tvSkor1.visibility = View.VISIBLE
                 tvSkor2.visibility = View.VISIBLE
                 tvSkor3.visibility = View.INVISIBLE
             }
             else if (size >= 1){
-                tvSkor1.text = dates.get(size-1).date.toString() +" " + scores.get(size-1).score.toString()
+                tvSkor1.text = "Tanggal " + dates.get(size-1).date.toString() +"\n Skor " + scores.get(size-1).score.toString()
                 tvBelum.visibility = View.INVISIBLE
                 tvSkor1.visibility = View.VISIBLE
                 tvSkor2.visibility = View.INVISIBLE
